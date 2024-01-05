@@ -1,0 +1,89 @@
+////Md. Econozzaman Econ
+///Department of CSE
+///BAIUST
+
+
+
+////-----------------Lib------------------------------------
+#include<bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+
+
+
+///-------------Define-----------------------------------------------
+#define          H3XU5                  ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define          pii                    pair < int, int>
+#define          pll                    pair < ll, ll>
+#define          MOD                    1000000007
+#define          ff                     first
+#define          ss                     second
+#define          pb                     push_back
+#define          eb                     emplace_back
+#define          int              long long int
+#define          endl            "\n"
+#define          PI               acos(-1.0)
+#define          IN              freopen("input.txt",'r',stdin)
+#define          cin1(x)               cin>>x
+#define          cin2(x,y)             cin>>x>>y
+#define          cin3(x, y, z)          cin>>x>>y>>z
+#define          min3(a,b,c)            min(a,min(b,c))
+#define          min4(a,b,c,d)          min(d,min(a,min(b,c)))
+#define          max3(a,b,c)            max(a,max(b,c))
+#define          max4(a,b,c,d)          max(d,max(a,max(b,c)))
+#define          no                     cout << "NO" << endl ;
+#define          yes                    cout << "YES" << endl ;
+#define          Count(C, x)             count(C.begin(), C.end(), x)
+
+///----------------------------Read-Write-------------------------------------
+#define	    READ;               freopen("input.txt","r",stdin);
+#define     WRITE;              freopen("output.txt","w",stdout);
+
+///----------------------------loop------------------------------------------
+
+#define fo(i,a,m)               for(ll i = a ; i < m ; i++)
+#define refor(i,a,m)            for(ll i = a ; i > m ; i--)
+#define foreq(i,a,m)            for(ll i = a ; i <= m ; i++)
+#define revforeq(i,a,m)         for(ll i = a ; i >= m ; i--)
+
+
+///-----------------------print----------------------------
+#define          cout1(x)             cout<<x<<endl
+#define          cout2(x,y)             cout<<x<<y<<endl
+#define          cout3(x,y,z)             cout<<x<<y<<z<<endl
+
+
+
+
+void solve()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+        int operations = 0;
+
+        for(int i=0; i < n-1;i++)
+        {
+            if ((a[i] % 2 && a[i+1]%2) || (a[i] % 2==0 && a[i+1]%2==0))
+                operations++;
+        }
+        cout << operations << endl;
+    }
+}
+int32_t main()
+{
+    H3XU5;
+    solve();
+    return 0;
+}
